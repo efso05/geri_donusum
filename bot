@@ -28,10 +28,101 @@ async def neyi_geri_donusturabilirim(ctx):
 
 @bot.command()
 async def atıklar_ne_kadar_surede_yok_olur(ctx):
-    await ctx.send(f"Strafor 5000 yıl - 2 Milyon yıl, Cam Şişe 4000 yıl,Plastik 1000 yıl,Poliüretan (Sentetik fiberler, yapıştırıcılar, halıların alt kısmı ve sert plastik contalar), 1000 yıl,Telefon Kartı 1000 yıl, Kaset 100 yıl - 1000 yıl, Su Boruları 1000 yıl, Balık Oltası 600 yıl, Bebek Bezi 550 yıl, Plastik Tabak 500 yıl, Pet Şişe 400 yıl, Deterjan 400 yıl, Pil 300 yıl, Alüminyum 100 yıl, Çakmak 100 yıl, Tahta Parçaları 15 yıl, Kutu Kola 10 yıl, Çiklet 5 yıl - 25 yıl, Boyalı Tahta 13 yıl, Yün Çorap 4 yıl, Kontrplak 1-3 yıl, Sigara İzmariti 1 yıl - 2 yıl, Yün 1 yıl - 2 yıl, İp Parçaları 3 ay - 14 ay, Bez Parçası 6 ay, Pamuklu Kumaş 1 ay - 5 ay, Meyve Artıkları 3 ay - 6 ay, Gazete 3 ay, Karton Süt Kutusu 3 ay, Elma Çöpü 2 ay, Kağıt Havlu 1 ay, Mendil 2-4 hafta")
+    await ctx.send(f"""Strafor 5000 yıl - 2 Milyon yıl
+                    Cam Şişe 4000 yıl,Plastik 1000 yıl
+                    Poliüretan (Sentetik fiberler, yapıştırıcılar, halıların alt kısmı ve sert plastik contalar) 1000 yıl
+                    Telefon Kartı 1000 yıl
+                    Kaset 100 yıl - 1000 yıl
+                    Su Boruları 1000 yıl
+                    Balık Oltası 600 yıl
+                    Bebek Bezi 550 yıl
+                    Plastik Tabak 500 yıl
+                    Pet Şişe 400 yıl
+                    Deterjan 400 yıl
+                    Pil 300 yıl
+                    Alüminyum 100 yıl
+                    Çakmak 100 yıl
+                    Tahta Parçaları 15 yıl
+                    Kutu Kola 10 yıl
+                    Çiklet 5 yıl - 25 yıl
+                    Boyalı Tahta 13 yıl
+                    Yün Çorap 4 yıl
+                    Kontrplak 1-3 yıl
+                    Sigara İzmariti 1 yıl - 2 yıl
+                    Yün 1 yıl - 2 yıl
+                    İp Parçaları 3 ay - 14 ay
+                    Bez Parçası 6 ay
+                    Pamuklu Kumaş 1 ay - 5 ay
+                    Meyve Artıkları 3 ay - 6 ay
+                    Gazete 3 ay
+                    Karton Süt Kutusu 3 ay
+                    Elma Çöpü 2 ay
+                    Kağıt Havlu 1 ay
+                    Mendil 2-4 hafta""")
 
-bot.run("")    
+
 
 @bot.command()
 async def bay(ctx):
     await ctx.send(f'görüşmek üzere:(')
+
+@bot.command()
+async def nereyi_temizliyim(ctx):
+    yer = ["Sahil","Bahçe","Sokak"]
+    await ctx.send(random.choice(yer))  
+
+@bot.command()
+async def atigimi_napiyim(ctx):
+    await ctx.send(f"""Öğrenmek istediğiniz atık 
+                   türünü aşağıdaki komutları
+                   kullanarak seçin
+                   metaller için:!metal
+                   plastikler için:!plastik
+                   camlar için:!cam
+                   kağıtlar için:!kagıt
+                   piller için:!pil
+                   organik atılklar için:!organik""")
+
+@bot.command()
+async def metal(ctx):
+    await ctx.send(f"""Metalleri geri dönüştürmek için 
+               onları geri dönüşüm kutularına atmak gerekir.
+               Fakat onları atmayıp kendimizde geri dönüştürebiliriz.
+               Mesela konserve kutularından saksı yapabilirsin.""")
+
+@bot.command()
+async def plastik(ctx):
+    await ctx.send(f"""Plastikleri geri dönüştürmek için 
+               onları geri dönüşüm kutularına atmak gerekir.
+               Fakat onları atmayıp kendimizde geri dönüştürebiliriz.
+               Mesela plastik pet şişelerden saksı yapabiliriz.""")
+
+@bot.command()
+async def cam(ctx):
+    await ctx.send(f"""Camları geri dönüştürmek için 
+               onları geri dönüşüm kutularına atmak gerekir.
+               Fakat onları atmayıp kendimizde geri dönüştürebiliriz.
+               Mesela bize küçük kalan gözlük camlarıyla dürbün yapabiliriz.""")
+
+@bot.command()
+async def kagıt(ctx):
+    await ctx.send(f"""Kağıtları geri dönüştürmek için 
+               onları geri dönüşüm kutularına atmak gerekir.
+               Fakat onları atmayıp kendimizde geri dönüştürebiliriz.
+               Mesela bir tarafı kullanılmış kağıtları yazıcımız varsa onun
+               için kullanabiliriz.""")
+
+@bot.command()
+async def pil(ctx):
+    await ctx.send(f"""Pilleri geri dönüştürmek için 
+               onları piller için özel olan geri
+               dönüşüm kutularına atmak gerekir.""")
+
+@bot.command()
+async def organik(ctx):
+    await ctx.send(f"""Organik atıklar geri dönüştürülemez.
+               Onları çöpe atmamız gerekir.""")
+    
+
+
+bot.run("")    
